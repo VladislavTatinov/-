@@ -1,0 +1,103 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: flicker 3s infinite alternate-reverse;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #00ff00;
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Изменения для выпадающего списка */
+.input-group select {
+    background-color: #000; /* Черный фон */
+}
+
+.btn-group {
+    text-align: center;
+}
+
+.btn-group button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+.btn-group button:hover {
+    background-color: #0056b3;
+}
+
+.btn-group button:active {
+    cursor: pointer;
+    animation: pulse 0.3s ease; /* Анимация курсора при нажатии */
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#results p {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#results span {
+    font-weight: bold;
+    color: #00ff00;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.7; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
